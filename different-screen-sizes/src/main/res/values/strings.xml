@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="list_item">Item:</string>
+    <string name="option_1">Option 1</string>
+    <string name="option_2">Option 2</string>
+
+    <string name="list_detail_screen_route">List detail</string>
+    <string name="list_support_screen_route">List support</string>
+
+</resources>
