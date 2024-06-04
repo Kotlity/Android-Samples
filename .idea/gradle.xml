@@ -11,6 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/different-screen-sizes" />
+            <option value="$PROJECT_DIR$/services" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

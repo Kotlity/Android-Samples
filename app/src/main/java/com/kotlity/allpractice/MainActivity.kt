@@ -13,7 +13,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AllPracticeTheme {
-                DifferentScreenSizesHandler()
+//                DifferentScreenSizesHandler()
+
             }
         }
     }

@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "AllPractice"
 include(":app")
 include(":different-screen-sizes")
+include(":services")
