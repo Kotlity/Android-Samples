@@ -6,8 +6,9 @@
 
     <application>
         <activity
-            android:name=".CompressingPhotosActivity"
-            android:exported="true">
+            android:name=".ui.CompressingPhotosActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

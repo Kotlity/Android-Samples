@@ -1,6 +1,6 @@
 package com.kotlity.services.helpers
 
 sealed class CompressingPhotosResult(val result: String) {
-    class Success(result: String): CompressingPhotosResult(result = result)
-    class Error(errorMessage: String): CompressingPhotosResult(result = errorMessage)
+    data class Success(val compressedPhotoFilePath: String): CompressingPhotosResult(result = compressedPhotoFilePath)
+    data class Error(val errorMessage: String): CompressingPhotosResult(result = errorMessage)
 }

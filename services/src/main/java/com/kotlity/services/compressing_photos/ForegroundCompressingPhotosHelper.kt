@@ -40,7 +40,7 @@ class ForegroundCompressingPhotosHelper(
                 fileName = compressedFileName,
                 outputBytes = bitmapCompressedBytesArray
             )
-            CompressingPhotosResult.Success(result = compressedFileAbsolutePath)
+            CompressingPhotosResult.Success(compressedPhotoFilePath = compressedFileAbsolutePath)
         }
     }
 }
