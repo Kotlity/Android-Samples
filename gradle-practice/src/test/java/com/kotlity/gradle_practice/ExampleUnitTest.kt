@@ -1,4 +1,4 @@
-package com.kotlity.services
+package com.kotlity.gradle_practice
 
 import org.junit.Test
 

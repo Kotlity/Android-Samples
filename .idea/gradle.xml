@@ -5,12 +5,14 @@
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="gradleHome" value="$USER_HOME$/gradle-8.8" />
+        <option name="gradleJvm" value="jbr-17" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/different-screen-sizes" />
+            <option value="$PROJECT_DIR$/gradle-practice" />
             <option value="$PROJECT_DIR$/services" />
           </set>
         </option>

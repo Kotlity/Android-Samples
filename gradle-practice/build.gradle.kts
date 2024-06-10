@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.kotlity.services"
+    namespace = "com.kotlity.gradle_practice"
     compileSdk = 34
 
     defaultConfig {
@@ -57,25 +57,55 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.13"
-    }
 }
 
 dependencies {
 
     implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+}
 
-    implementation(libs.coil.compose)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
+abstract class SimpleGradleTask: DefaultTask() {
+
+    private val fileName = "myFile.txt"
+
+    @get:Input
+    abstract val fileTextInput: Property<String>
+
+    @OutputFile
+    val file = File(fileName)
+
+    @TaskAction
+    fun action() {
+        file.bufferedWriter().use {
+            it.write(fileTextInput.get())
+        }
+    }
+}
+
+tasks.apply {
+    register<SimpleGradleTask>(name = "simpleGradleTask")
+    named<SimpleGradleTask>("simpleGradleTask") {
+        fileTextInput = "It's my first simple gradle task !"
+    }
+    register("copyApk", Copy::class) {
+        val apkDirectory = layout.buildDirectory.dir("intermediates/apk/freeDevelopment/debug/app-free-development-debug.apk")
+        val destDirectory = "$projectDir/apk"
+        from(apkDirectory)
+        into(destDirectory)
+        rename("app-free-development-debug.apk", "final.apk")
+        doLast {
+            val file = File(destDirectory, "final.apk")
+            ant.withGroovyBuilder {
+                "checksum"("file" to file(file.path))
+            }
+        }
+    }
+}
+
+tasks.whenTaskAdded { // execute after every task added to gradle
+    if (this.name == "assembleDebug") { // check for the specific task in gradle
+        this.finalizedBy("copyApk") // execute copyApk task after assembleDebug task is finished
+    }
 }
