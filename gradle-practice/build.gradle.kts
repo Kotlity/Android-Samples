@@ -51,11 +51,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
@@ -63,4 +63,49 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+}
+
+abstract class SimpleGradleTask: DefaultTask() {
+
+    private val fileName = "myFile.txt"
+
+    @get:Input
+    abstract val fileTextInput: Property<String>
+
+    @OutputFile
+    val file = File(fileName)
+
+    @TaskAction
+    fun action() {
+        file.bufferedWriter().use {
+            it.write(fileTextInput.get())
+        }
+    }
+}
+
+tasks.apply {
+    register<SimpleGradleTask>(name = "simpleGradleTask")
+    named<SimpleGradleTask>("simpleGradleTask") {
+        fileTextInput = "It's my first simple gradle task !"
+    }
+    register("copyApk", Copy::class) {
+        val apkDirectory = layout.buildDirectory.dir("intermediates/apk/freeDevelopment/debug/app-free-development-debug.apk")
+        val destDirectory = "$projectDir/apk"
+        from(apkDirectory)
+        into(destDirectory)
+        rename("app-free-development-debug.apk", "final.apk")
+        doLast {
+            val file = File(destDirectory, "final.apk")
+            ant.withGroovyBuilder {
+                "checksum"("file" to file(file.path))
+            }
+        }
+    }
+}
+
+tasks.whenTaskAdded { // execute after every task added to gradle
+    if (this.name == "assembleDebug") { // check for the specific task in gradle
+        this.finalizedBy("copyApk") // execute copyApk task after assembleDebug task is finished
+    }
 }
