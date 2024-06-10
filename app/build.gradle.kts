@@ -52,6 +52,7 @@ android {
 dependencies {
     implementation(project(":different-screen-sizes"))
     implementation(project(":services"))
+    implementation(project(":gradle-practice"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
