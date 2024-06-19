@@ -1,4 +1,4 @@
-package com.kotlity.different_screen_sizes.ui.theme
+package com.kotlity.services.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -7,7 +7,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
-import com.kotlity.different_screen_sizes.ui.theme.AllPracticeTheme
+import com.kotlity.services.ui.theme.ServicesTheme
 import com.kotlity.services.CompressingPhotosService
 import com.kotlity.services.decoder.FilePathBitmapDecoder
 import com.kotlity.services.events.PhotosCompressingEvent
@@ -47,7 +47,7 @@ class CompressingPhotosActivity : ComponentActivity() {
         setContent {
             val photosCompressingState = photosCompressingViewModel.photosCompressingState
             val siteUrlValidatorState = photosCompressingViewModel.siteUrlValidatorState
-            AllPracticeTheme {
+            ServicesTheme {
                 PhotosCompressingScreen(
                     photosCompressingState = photosCompressingState,
                     siteUrlValidatorState = siteUrlValidatorState,

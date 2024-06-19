@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="workManagerTitle">WorkManager</string>
+    <string name="siteTextFieldPlaceholderText">Paste or write a link to the site(for ex. <i>http://www.google.com</i>)</string>
+    <string name="siteLauncherButtonText">Launch a site</string>
+    <string name="siteTextFieldIsBlankErrorMessage">The link to the site must not be empty</string>
+    <string name="siteTextFieldIncorrectUrlFormatErrorMessage">Incorrect site url format</string>
+    <string name="downloadFileTitle">File %1$s is downloading</string>
+    <string name="gettingFileUrlError">Something went wrong when receiving a link to the file</string>
+    <string name="downloadFileError">Something went wrong while uploading the file</string>
+    <string name="fileDownloadComplete">File download complete</string>
+</resources>

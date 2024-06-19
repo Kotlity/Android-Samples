@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.kotlity.allpractice.ui.theme.AllPracticeTheme
-import com.kotlity.different_screen_sizes.screens.DifferentScreenSizesHandler
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
