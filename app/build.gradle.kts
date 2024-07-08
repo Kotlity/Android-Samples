@@ -83,6 +83,7 @@ dependencies {
     implementation(project(":services"))
     implementation(project(":gradle-practice"))
     implementation(project(":workmanager"))
+    implementation(project(":network"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -91,8 +92,7 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.material3)
-
-    implementation(libs.kotlinx.coroutines.android)
+    
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.work)

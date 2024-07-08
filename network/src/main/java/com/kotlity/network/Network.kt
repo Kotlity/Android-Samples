@@ -4,7 +4,9 @@ import com.google.gson.Gson
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.Dispatcher
+import okhttp3.HttpUrl
 import okhttp3.Interceptor
+import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
@@ -44,6 +46,14 @@ fun main() {
         .addInterceptor(httpLoggingInterceptor)
         .build()
 
+    val httpUrl = HttpUrl.Builder()
+        .scheme("https")
+        .host("jsonplaceholder.typicode.com")
+        .addPathSegment("posts")
+        .addPathSegment("5")
+        .build()
+
+
     val gson = Gson()
     val postRequest = Post(
         userId = 1,
@@ -51,10 +61,10 @@ fun main() {
         title = "Post title",
         body = "This is a post body"
     )
-    val requestBody = gson.toJson(postRequest, Post::class.java).toRequestBody()
+//    val requestBody = gson.toJson(postRequest, Post::class.java).toRequestBody(contentType = contentType.toMediaType())
 
     val request = Request.Builder()
-        .url("$ALL_POSTS/5")
+        .url(httpUrl)
         .delete()
 //        .url(ALL_POSTS)
 //        .post(requestBody)
