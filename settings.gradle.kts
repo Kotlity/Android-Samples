@@ -21,3 +21,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "AllPractice"
 include(":app")
+include(":different-screen-sizes")
+include(":services")
+include(":gradle-practice")
+include(":workmanager")
+include(":network")
+include(":websockets")

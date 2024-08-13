@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="connectException">Connect exception !</string>
+    <string name="noRouteToHostException">Routing exception !</string>
+    <string name="malformedUrlException">Incorrect URL format !</string>
+    <string name="sslException">SSL exception !</string>
+    <string name="timeoutException">Timed out !</string>
+    <string name="httpException">HTTP exception !</string>
+    <string name="ioException">IO exception !</string>
+    <string name="noDataReceived">No data received !</string>
+
+    <string name="postHasBeenSuccessfullyDeleted">Post #%1$d has been successfully deleted</string>
+
+    <string name="userId">UserId: %1$d</string>
+    <string name="id">Id: %1$d</string>
+    <string name="title">Title: %1$s</string>
+    <string name="body">Body: %1$s</string>
+
+    <string name="postId">PostId: %1$d</string>
+    <string name="name">Name: %1$s</string>
+    <string name="email">Email: %1$s</string>
+
+    <string name="albumId">AlbumId: %1$d</string>
+
+    <string name="userIdLabel">UserId</string>
+    <string name="idLabel">Id</string>
+    <string name="titleLabel">Title</string>
+    <string name="bodyLabel">Body</string>
+
+    <string name="getAllPosts">Get all posts</string>
+    <string name="getPostById">Get post by id</string>
+    <string name="getPostCommentsById">Get post comments by id</string>
+    <string name="getAlbumPhotosByAlbumId">Get album photos by album id</string>
+    <string name="createNewPost">Create new post</string>
+    <string name="updatePostById">Update post</string>
+    <string name="deletePostById">Delete post</string>
+
+    <string name="postLabel">Select id</string>
+    <string name="albumPhotoLabel">Select album id</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="compressingPhotoServiceDescription">This service is used to compress images</string>
+    <string name="intentActivityProgressExtraName">compressing progress</string>
+    <string name="notificationContentTitleInProgress">Compressing the image is in progress</string>
+    <string name="notificationContentTitleCompleted">Compressing the image is completed</string>
+    <string name="deviceIsNotSupportingSendingNotifications">Your device is not supporting to sending notifications</string>
+    <string name="compressingImageError">Something went wrong when compressing the image</string>
+    <string name="siteTextFieldPlaceholderText">Paste or write a link to the site</string>
+    <string name="siteLauncherButtonText">Launch a site</string>
+    <string name="siteTextFieldIsBlankErrorMessage">The link to the site must not be empty</string>
+    <string name="siteTextFieldIncorrectUrlFormatErrorMessage">Incorrect site url format</string>
+    <string name="postNotificationPermissionNotGranted">Please, grant permission to post notifications</string>
+</resources>
