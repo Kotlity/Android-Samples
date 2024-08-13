@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/gradle-practice" />
             <option value="$PROJECT_DIR$/network" />
             <option value="$PROJECT_DIR$/services" />
+            <option value="$PROJECT_DIR$/websockets" />
             <option value="$PROJECT_DIR$/workmanager" />
           </set>
         </option>

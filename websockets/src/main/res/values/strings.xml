@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="connectChatTextFieldLabel">Username</string>
+    <string name="connectChatButtonTitle">Connect as \"%1$s\"</string>
+
+    <string name="connectException">There was a connection error occurred</string>
+    <string name="noRouteToHostException">There was a no route to host</string>
+    <string name="malformedUrlException">There is incorrect URL</string>
+    <string name="SSLlException">There was an error with the SSL certificate</string>
+    <string name="timeoutException">Connection took to long an error occurred</string>
+    <string name="noDataReceived">No data received</string>
+
+    <string name="connectionAlreadyEstablished">Connection established</string>
+    <string name="connectionEstablishException">There was a connecting to chat error occurred</string>
+    <string name="websocketException">There was a websocket error occurred</string>
+
+    <string name="usernameIsBlank">Username cannot be blank</string>
+    <string name="usernameContainsDigits">Username cannot contains digits</string>
+    <string name="usernameContainsProhibitedCharacters">Username cannot contains prohibited characters</string>
+
+    <string name="labelDismiss">Dismiss</string>
+
+    <string name="messageTextFieldPlaceholder">Enter a message</string>
+</resources>
